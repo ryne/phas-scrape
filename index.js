@@ -1,10 +1,7 @@
-const PORT = 8000;
 const axios = require('axios');
 const cheerio = require('cheerio');
-const express = require('express');
 const fs = require('fs');
 
-const app = express();
 const urls = [
   'https://phasmophobia.fandom.com/wiki/Banshee',
   'https://phasmophobia.fandom.com/wiki/Demon',
@@ -28,26 +25,6 @@ const urls = [
   'https://phasmophobia.fandom.com/wiki/Yokai',
   'https://phasmophobia.fandom.com/wiki/Yurei',
 ];
-
-/*
-const episodes = [
-    axios('https://rickandmortyapi.com/api/episode/1'),
-    axios('https://rickandmortyapi.com/api/episode/2'),
-    axios('https://rickandmortyapi.com/api/episode/3')
-];
-
-Promise.all(episodes).then((data) => {
-  const episode1 = data[0];
-  const episode2 = data[1];
-  const episode3 = data[2];
-});
-
-// Create a promise using Promise.all().
-const episodeResponses = Promise.all(character.urls.map(url => axios(url)));
-
-// Access the response once all promises are resolved.
-episodesResponses.then(x => console.log(x))
-*/
 
 ghosts = [];
 
@@ -129,16 +106,16 @@ for (let i = 0; i < urls.length; i++) {
       excluded: false,
     });
 
-    console.log(ghosts);
-  });
-}
-
-setTimeout(function () {
-  fs.writeFile(`ghost.txt`, JSON.stringify(ghosts), function (err) {
-    if (err) {
-      console.log(err);
+    if (ghosts.length === urls.length) {
+      fs.writeFile(`ghosts.txt`, JSON.stringify(ghosts), function (err) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(
+            `Successfully parsed ${ghosts.length} ghosts to ghosts.txt!`
+          );
+        }
+      });
     }
   });
-}, 5000);
-
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+}
