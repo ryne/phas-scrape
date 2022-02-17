@@ -6,4 +6,6 @@ A simple web scraper to pull all current Phasmophobia ghosts and relevant inform
 
 ### `npm install` to install required modules.
 
-### `npm start` to run the script and wait for output to finish.
+### `npm start` to start the script.
+
+### JSON will output to "Ghosts.txt" in root folder.
