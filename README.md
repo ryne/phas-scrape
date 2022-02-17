@@ -8,4 +8,4 @@ A simple web scraper to pull all current Phasmophobia ghosts and relevant inform
 
 ### `npm start` to start the script.
 
-### JSON will output to "Ghosts.txt" in root folder.
+### JSON will output to "ghosts.txt" in root folder.
