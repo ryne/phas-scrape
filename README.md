@@ -2,10 +2,10 @@
 
 A simple web scraper to pull all current Phasmophobia ghosts and relevant information (if available), creating a JSON starterpoint for building out ghosts and relevant information.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+### `npm install` to install required modules.
 
-### `npm start`
+### `npm start` to start the script.
 
-Runs the script and outputs the stringified JSON to "ghosts.txt".
+### JSON will output to "Ghosts.txt" in root folder.
