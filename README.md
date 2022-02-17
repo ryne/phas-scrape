@@ -1,6 +1,6 @@
 # Phas Scrape
 
-A simple web scraper to pull all current ghosts and relevant information (if available), creating a JSON starterpoint for building out ghosts and relevant information.
+A simple web scraper to pull all current Phasmophobia ghosts and relevant information (if available), creating a JSON starterpoint for building out ghosts and relevant information.
 
 ## Available Scripts
 
