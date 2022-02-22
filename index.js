@@ -69,11 +69,15 @@ for (let i = 0; i < urls.length; i++) {
       .join('.')}.png`;
 
     const strength = $(
-      '#content aside.portable-infobox div[data-source="strength"] > div > ul > li'
+      '#content aside.portable-infobox div[data-source="strength"] > div'
     ).text();
 
     const weakness = $(
-      '#content aside.portable-infobox div[data-source="weakness(es)"] > div > ul > li'
+      '#content aside.portable-infobox div[data-source="weakness(es)"] > div'
+    ).text();
+
+    const abilities = $(
+      '#content aside.portable-infobox div[data-source="abiliti(es)"] > div'
     ).text();
 
     const behavior = $('#Behaviour')
@@ -101,6 +105,7 @@ for (let i = 0; i < urls.length; i++) {
       },
       strength: strength,
       weakness: weakness,
+      abilities: abilities,
       behavior: behavior,
       strategies: strategies,
       excluded: false,
